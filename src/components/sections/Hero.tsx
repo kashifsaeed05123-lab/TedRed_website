@@ -86,7 +86,15 @@ const Hero = () => {
                             transition={{ delay: 0.3 }}
                             className="mb-8"
                         >
-                            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-poppins leading-tight">
+                            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-poppins leading-tight flex flex-wrap items-center gap-x-4">
+                                <motion.img
+                                    src="/TedRed-logo-circular.png"
+                                    alt="TedRed Logo"
+                                    initial={{ scale: 0.8, opacity: 0 }}
+                                    animate={{ scale: 1, opacity: 1 }}
+                                    transition={{ duration: 0.8, delay: 0.4 }}
+                                    className="h-12 w-12 md:h-20 md:w-20 lg:h-24 lg:w-24 object-contain drop-shadow-[0_0_20px_rgba(255,77,90,0.6)]"
+                                />
                                 Transforming Ideas into
                             </h1>
                             <div className="h-10 md:h-20 overflow-hidden relative mt-2">
