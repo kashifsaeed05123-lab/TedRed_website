@@ -52,14 +52,14 @@ const Navbar = () => {
                     </motion.a>
 
                     {/* Desktop Navigation */}
-                    <div className="hidden md:flex items-center gap-8">
+                    <div className="hidden md:flex items-center gap-4 lg:gap-8">
                         {navLinks.map((link) => (
                             <motion.button
                                 key={link.name}
                                 whileHover={{ scale: 1.1, y: -2 }}
                                 whileTap={{ scale: 0.95 }}
                                 onClick={() => scrollToSection(link.href)}
-                                className="text-gray-200 hover:text-white transition-colors duration-200 font-bold text-sm tracking-wide relative group"
+                                className="text-gray-200 hover:text-white transition-colors duration-200 font-bold text-sm tracking-wide relative group whitespace-nowrap"
                             >
                                 {link.name}
                                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
@@ -70,8 +70,15 @@ const Navbar = () => {
                     {/* CTA Button */}
                     <div className="hidden md:block">
                         <Button
+                            size="sm"
                             onClick={() => scrollToSection('#contact')}
-                            className="hover:scale-105 active:scale-95 transition-transform"
+                            className="lg:hidden hover:scale-105 active:scale-95 transition-transform whitespace-nowrap"
+                        >
+                            Work With Us
+                        </Button>
+                        <Button
+                            onClick={() => scrollToSection('#contact')}
+                            className="hidden lg:flex hover:scale-105 active:scale-95 transition-transform"
                         >
                             Let's Build Something Amazing
                         </Button>
