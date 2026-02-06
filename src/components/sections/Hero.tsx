@@ -86,10 +86,10 @@ const Hero = () => {
                             transition={{ delay: 0.3 }}
                             className="mb-8"
                         >
-                            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-poppins leading-tight">
+                            <h1 className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-bold font-poppins leading-tight whitespace-nowrap">
                                 Transforming Ideas into
                             </h1>
-                            <div className="h-10 md:h-20 overflow-hidden relative mt-2">
+                            <div className="h-8 sm:h-12 md:h-20 overflow-hidden relative mt-2">
                                 <AnimatePresence mode="wait">
                                     <motion.div
                                         key={currentKeywordIndex}
@@ -97,7 +97,7 @@ const Hero = () => {
                                         animate={{ y: 0, opacity: 1 }}
                                         exit={{ y: -20, opacity: 0 }}
                                         transition={{ duration: 0.5, ease: "backOut" }}
-                                        className="text-3xl md:text-5xl lg:text-6xl font-bold font-poppins italic text-primary absolute top-0 left-0"
+                                        className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-poppins italic text-primary absolute top-0 left-0 whitespace-nowrap"
                                     >
                                         {keywords[currentKeywordIndex]}
                                     </motion.div>
