@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, ReactNode } from 'react'
+import type { ButtonHTMLAttributes, ReactNode } from 'react'
 import { motion } from 'framer-motion'
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -28,12 +28,14 @@ const Button = ({
         lg: 'px-8 py-4 text-lg',
     }
 
+    const { onDrag, onDragStart, onDragEnd, onDragOver, onAnimationStart, ...rest } = props
+
     return (
         <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className={`${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`}
-            {...props}
+            {...rest}
         >
             {children}
         </motion.button>

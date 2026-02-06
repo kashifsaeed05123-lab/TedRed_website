@@ -1,13 +1,9 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
-    ExternalLink,
     X,
-    ArrowRight,
     CheckCircle2,
-    Trophy,
     TrendingUp,
-    Clock,
     Target
 } from 'lucide-react'
 import SectionTitle from '../ui/SectionTitle'
